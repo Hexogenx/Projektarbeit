@@ -20,7 +20,7 @@ while True:
                 if calc.testHex(zahlh):
                     # Direkte Berechnung
                     result = calc.toDec("h", zahlh)
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -31,7 +31,7 @@ while True:
                 if calc.testHex(zahlh):
                     # Von Hexadezimal nach Dezimal, von Dezimal nach Oktal
                     result = calc.decTo("o", calc.toDec("h", zahlh))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -42,7 +42,7 @@ while True:
                 if calc.testHex(zahlh):
                     # Von Hexadezimal nach Dezimal, von Dezimal nach Binär
                     result = calc.decTo("b", calc.toDec("h", zahlh))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -63,7 +63,7 @@ while True:
                 if calc.testDec(zahld):
                     # Direkte Berechnung
                     result = calc.decTo("h", int(zahld))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -74,7 +74,7 @@ while True:
                 if calc.testDec(zahld):
                     # Direkte Berechnung
                     result = calc.decTo("o", int(zahld))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -85,7 +85,7 @@ while True:
                 if calc.testDec(zahld):
                     # Direkte Berechnung
                     result = calc.decTo("b", int(zahld))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -106,7 +106,7 @@ while True:
                 if calc.testOct(zahlo):
                     # Von Oktal nach Dezimal, von Dezimal nach Hexadezimal
                     result = calc.decTo("h", calc.toDec("o", zahlo))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -117,7 +117,7 @@ while True:
                 if calc.testOct(zahlo):
                     # Direkte Berechnung
                     result = calc.toDec("o", zahlo)
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -128,7 +128,7 @@ while True:
                 if calc.testOct(zahlo):
                     # Von Oktal nach Dezimal, von Dezimal nach Binär
                     result = calc.decTo("b", calc.toDec("o", zahlo))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -149,7 +149,7 @@ while True:
                 if calc.testBin(zahlb):
                     # Von Binär nach Dezimal, von Dezimal nach Hexadezimal
                     result = calc.decTo("h", calc.toDec("b", zahlb))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -160,7 +160,7 @@ while True:
                 if calc.testBin(zahlb):
                     # Direkte Berechnung
                     result = calc.toDec("b", zahlb)
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:
@@ -171,7 +171,7 @@ while True:
                 if calc.testBin(zahlb):
                     # Von Binär nach Dezimal, von Dezimal nach Oktal
                     result = calc.decTo("o", calc.toDec("b", zahlb))
-                    print(result)
+                    print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
                 else:

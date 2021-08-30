@@ -123,6 +123,8 @@ def testBin(sample: str) -> bool:
     for i in range(0,len(sample)):
         if not BINARY.count(sample[i]):
             return False
+    if sample == "":
+        return False
     return True
 
 def testOct(sample: str) -> bool:
@@ -131,6 +133,8 @@ def testOct(sample: str) -> bool:
     for i in range(0,len(sample)):
         if not OCTAL.count(sample[i]):
             return False
+    if sample == "":
+        return False
     return True
 
 def testDec(sample: str) -> bool:
@@ -139,6 +143,8 @@ def testDec(sample: str) -> bool:
     for i in range(0,len(sample)):
         if not DECIMAL.count(sample[i]):
             return False
+    if sample == "":
+        return False
     return True
 
 def testHex(sample: str) -> bool:
@@ -147,4 +153,6 @@ def testHex(sample: str) -> bool:
     for i in range(0,len(sample)):
         if not HEXADECIMAL.count(sample[i].capitalize()):
             return False
+    if sample == "":
+        return False
     return True

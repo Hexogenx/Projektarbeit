@@ -1,182 +1,157 @@
 # Programm zum Umrechnen von Zahlen aus einem Zahlensystem in ein Anderes.
+#
+# Autor: Daniel Grudzinski
+# Lizenz: GPL 3.0
+# Version: 1.1
+#
 # Module liegen im Unterordner /modules
 import modules.calculations as calc
 import modules.menues as menu
 
 # Kontinuierliche Menüerstellung
 while True:
-    # Aufruf des Hauptmenüs
     menu.mainmenu()
     inp = input("Ihre Wahl: ")
-    # Fallunterscheidung Hauptmenüauswahl
     if inp == "1":
+        while True:
+            zahl = input("Bitte Zahl für Umrechnung eingeben: ")
+            if calc.testHex(zahl):
+                break
+            else:
+                print("Die eingegebene Zahl ist keine hexadezimale Zahl. Bitte erneut versuchen.")
         menu.hexmenu()
         inph = input("Ihre Wahl: ")
         while True:
-            # Kontinuierlicher Aufruf des Untermenüs und Fallunterscheidung der Menüauswahl
-            if inph == "1":
+                if inph == "1":
                 # Hexadezimal nach Dezimal
-                zahlh = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testHex(zahlh):
                     # Direkte Berechnung
-                    result = calc.toDec("h", zahlh)
+                    result = calc.toDec("h", zahl)
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine hexadezimale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "2":
+                elif inph == "2":
                 # Hexadezimal nach Oktal
-                zahlh = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testHex(zahlh):
                     # Von Hexadezimal nach Dezimal, von Dezimal nach Oktal
-                    result = calc.decTo("o", calc.toDec("h", zahlh))
+                    result = calc.decTo("o", calc.toDec("h", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine hexadezimale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "3":
+                elif inph == "3":
                 # Hexadezimal nach Binär
-                zahlh = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testHex(zahlh):
                     # Von Hexadezimal nach Dezimal, von Dezimal nach Binär
-                    result = calc.decTo("b", calc.toDec("h", zahlh))
+                    result = calc.decTo("b", calc.toDec("h", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
+                elif inph == "q":
+                    break
                 else:
-                    print("Diese Zahl ist keine hexadezimale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "q":
+                    print("Fehlerhafte Eingabe. Bitte wählen sie einen Menüpunkt.")
+                    break
+    elif inp == "2":
+        while True:
+            zahl = input("Bitte Zahl für Umrechnung eingeben: ")
+            if calc.testDec(zahl):
                 break
             else:
-                print("Fehlerhafte Eingabe. Bitte wählen sie einen Menüpunkt.")
-                break
-    elif inp == "2":
+                print("Die eingegebene Zahl ist keine dezimale Zahl. Bitte erneut versuchen.")
         menu.decmenu()
-        inph = input("Ihre Wahl: ")
+        inpd = input("Ihre Wahl: ")
         while True:
-            # Kontinuierlicher Aufruf des Untermenüs und Fallunterscheidung der Menüauswahl
-            if inph == "1":
+            if inpd == "1":
                 # Dezimal nach Hexadezimal
-                zahld = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testDec(zahld):
                     # Direkte Berechnung
-                    result = calc.decTo("h", int(zahld))
+                    result = calc.decTo("h", int(zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine dezimale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "2":
+            elif inpd == "2":
                 # Dezimal nach Oktal
-                zahld = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testDec(zahld):
                     # Direkte Berechnung
-                    result = calc.decTo("o", int(zahld))
+                    result = calc.decTo("o", int(zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine dezimale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "3":
+            elif inpd == "3":
                 # Dezimal nach Binär
-                zahld = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testDec(zahld):
                     # Direkte Berechnung
-                    result = calc.decTo("b", int(zahld))
+                    result = calc.decTo("b", int(zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine dezimale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "q":
+            elif inpd == "q":
                 break
             else:
                 print("Fehlerhafte Eingabe. Bitte wählen sie einen Menüpunkt.")
                 break
     elif inp == "3":
-        menu.octmenu()
-        # Kontinuierlicher Aufruf des Untermenüs und Fallunterscheidung der Menüauswahl
-        inph = input("Ihre Wahl: ")
         while True:
-            if inph == "1":
+            zahl = input("Bitte Zahl für Umrechnung eingeben: ")
+            if calc.testOct(zahl):
+                break
+            else:
+                print("Die eingegebene Zahl ist keine oktale Zahl. Bitte erneut versuchen.")
+        menu.octmenu()
+        inpo = input("Ihre Wahl: ")
+        while True:
+            if inpo == "1":
                 # Oktal nach Hexadezimal
-                zahlo = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testOct(zahlo):
                     # Von Oktal nach Dezimal, von Dezimal nach Hexadezimal
-                    result = calc.decTo("h", calc.toDec("o", zahlo))
+                    result = calc.decTo("h", calc.toDec("o", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine oktale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "2":
+            elif inpo == "2":
                 # Oktal nach Dezimal
-                zahlo = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testOct(zahlo):
                     # Direkte Berechnung
-                    result = calc.toDec("o", zahlo)
+                    result = calc.toDec("o", zahl)
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine oktale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "3":
+            elif inpo == "3":
                 # Oktal nach Binär
-                zahlo = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testOct(zahlo):
                     # Von Oktal nach Dezimal, von Dezimal nach Binär
-                    result = calc.decTo("b", calc.toDec("o", zahlo))
+                    result = calc.decTo("b", calc.toDec("o", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine oktale Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "q":
+            elif inpo == "q":
                 break
             else:
                 print("Fehlerhafte Eingabe. Bitte wählen sie einen Menüpunkt.")
                 break
     elif inp == "4":
-        menu.binmenu()
-        # Kontinuierlicher Aufruf des Untermenüs und Fallunterscheidung der Menüauswahl
-        inph = input("Ihre Wahl: ")
         while True:
-            if inph == "1":
+            zahl = input("Bitte Zahl für Umrechnung eingeben: ")
+            if calc.testBin(zahl):
+                break
+            else:
+                print("Die eingegebene Zahl ist keine binäre Zahl. Bitte erneut versuchen.")
+        menu.binmenu()
+        inpb = input("Ihre Wahl: ")
+        while True:
+            if inpb == "1":
                 # Binär nach Hexadezimal
-                zahlb = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testBin(zahlb):
                     # Von Binär nach Dezimal, von Dezimal nach Hexadezimal
-                    result = calc.decTo("h", calc.toDec("b", zahlb))
+                    result = calc.decTo("h", calc.toDec("b", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine binäre Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "2":
+            elif inpb == "2":
                 # Binär nach Dezimal
-                zahlb = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testBin(zahlb):
                     # Direkte Berechnung
-                    result = calc.toDec("b", zahlb)
+                    result = calc.toDec("b", zahl)
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine binäre Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "3":
+            elif inpb == "3":
                 # Binär nach Oktal
-                zahlb = input("Bitte Zahl für Umrechnung eingeben: ")
-                if calc.testBin(zahlb):
                     # Von Binär nach Dezimal, von Dezimal nach Oktal
-                    result = calc.decTo("o", calc.toDec("b", zahlb))
+                    result = calc.decTo("o", calc.toDec("b", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                else:
-                    print("Diese Zahl ist keine binäre Zahl. Bitte Eingabe überprüfen.")
-            elif inph == "q":
+            elif inpb == "q":
                 break
             else:
                 print("Fehlerhafte Eingabe. Bitte wählen sie einen Menüpunkt.")

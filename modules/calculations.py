@@ -119,7 +119,6 @@ def toDec(source: str, zahl: str) -> int:
 
 def testBin(sample: str) -> bool:
     """Testet, ob ein eingegebener String [sample] eine valide Darstellung einer binären Zahl ist"""
-    valid = False
     for i in range(0,len(sample)):
         if not BINARY.count(sample[i]):
             return False
@@ -129,7 +128,6 @@ def testBin(sample: str) -> bool:
 
 def testOct(sample: str) -> bool:
     """Testet, ob ein eingegebener String [sample] eine valide Darstellung einer oktalen Zahl ist"""
-    valid = False
     for i in range(0,len(sample)):
         if not OCTAL.count(sample[i]):
             return False
@@ -139,7 +137,6 @@ def testOct(sample: str) -> bool:
 
 def testDec(sample: str) -> bool:
     """Testet, ob ein eingegebener String [sample] eine valide Darstellung einer dezimalen Zahl ist"""
-    valid = False
     for i in range(0,len(sample)):
         if not DECIMAL.count(sample[i]):
             return False
@@ -149,7 +146,6 @@ def testDec(sample: str) -> bool:
 
 def testHex(sample: str) -> bool:
     """Testet, ob ein eingegebener String [sample] eine valide Darstellung einer hexadezimalen Zahl ist"""
-    valid = False
     for i in range(0,len(sample)):
         if not HEXADECIMAL.count(sample[i].capitalize()):
             return False

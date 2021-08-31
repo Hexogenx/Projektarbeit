@@ -1,0 +1,27 @@
+START toDec(source, zahl), Parameter source ist String, zahl ist String.
+    wenn das Quellsystem binär ist:
+        ergebnis startet bei 0
+        wenn die zahl 0 ist, return 0 #(Fehlervermeidung)
+        vertauschen der ziffern der zahl von vorne nach hinten und mach ne liste draus
+        für alle ziffern in der liste:
+            ergebnis = ergebnis + integer der ziffer mal basis 2 hoch stellenwert
+        ausgeben des ergebnisses
+    wenn das Quellsystem oktal ist:
+        ergebnis startet bei 0
+        wenn die zahl 0 ist, return 0 #(Fehlervermeidung)
+        vertauschen der ziffern der zahl von vorne nach hinten und mach ne liste draus
+        für alle ziffern in der liste:
+            ergebnis = ergebnis + integer der ziffer mal basis 8 hoch stellenwert
+        ausgeben des ergebnisses
+    wenn das Quellsystem hexadezimal ist:
+        ergebnis startet bei 0
+        wenn die zahl 0 ist, return 0 #(Fehlervermeidung)
+        vertauschen der ziffern der zahl von vorne nach hinten und mach ne liste draus
+        für jede ziffer in der liste:
+            wenn die ziffer keine zahl ist, sondern buchstabe:
+                ziffer großschreiben
+                ziffer mit der zahl aus der konvertierungskonstante tauschen
+        für alle ziffern in der zahl:
+            ergebnis = ergebnis + integer der ziffer mal basis 16 hoch stellenwert
+        ausgeben des ergebnisses
+    ansonsten Fehler ausgeben #(zu debug zwecken)

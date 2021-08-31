@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="10AFED4BC67F66E9">
+  <PROJECT FORMAT="1.00" NAME="toDec()" AUTHOR="Hexogen" CREATED="2021.08.31 20:09:09" MODIFIED="2021.08.31 21:19:47">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="toDec(source, zahl)" CREATED="2021.08.31 20:09:20" MODIFIED="2021.08.31 21:19:47">
+        <LAYOUT FORMAT="1.00" COLUMNS="6" ROWS="25">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="80">
+                <TEXT><![CDATA[Ausgabe von 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="109">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="69">
+                <TEXT><![CDATA[result := 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="78">
+                <TEXT><![CDATA[zahl == "0"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="82">
+                <TEXT><![CDATA[Liste aller Ziffern invertieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="84" ASSOCIATE="85">
+                <TEXT><![CDATA[für alle Elemente in zahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="88">
+                <TEXT><![CDATA[result := result + int(zahl[i])*8**i]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="13">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="85" ASSOCIATE="84">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="14">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="90">
+                <TEXT><![CDATA[Ausgabe von result]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="113">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="23">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="96">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[toDec(source, zahl)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="2">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Quelle binär?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Quelle oktal?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Quelle hexadezimal?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="22">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Ausgabe von Fehler]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="23">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="71">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="24">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[result := 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="3">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[zahl == "0"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="40">
+                <TEXT><![CDATA[Liste aller Ziffern invertieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="5">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="188" ASSOCIATE="189">
+                <TEXT><![CDATA[für alle Elemente in zahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="49">
+                <TEXT><![CDATA[result := result + int(zahl[i])*2**i]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="7">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="189" ASSOCIATE="188">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="51">
+                <TEXT><![CDATA[Ausgabe von result]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="140">
+                <TEXT><![CDATA[result := 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="11">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="142">
+                <TEXT><![CDATA[zahl == "0"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="158">
+                <TEXT><![CDATA[Liste aller Ziffern invertieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="13">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="160" ASSOCIATE="161">
+                <TEXT><![CDATA[für alle Elemente in Zahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="14">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="164">
+                <TEXT><![CDATA[Element ist ein Buchstabe?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="166">
+                <TEXT><![CDATA[Großschreiben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="16">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="168">
+                <TEXT><![CDATA[mit entsprechendem Wert tauschen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="17">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="161" ASSOCIATE="160">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="18">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="177" ASSOCIATE="178">
+                <TEXT><![CDATA[für alle Elemente in Zahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="19">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="181">
+                <TEXT><![CDATA[result := result + int(zahl[i])*16**i]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="20">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="178" ASSOCIATE="177">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="21">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="183">
+                <TEXT><![CDATA[Ausgabe von result]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="23">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="185">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="3">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="26">
+                <TEXT><![CDATA[Ausgabe von 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="219">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="207">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="11">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="143">
+                <TEXT><![CDATA[Ausgabe von 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="209">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="23">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="213">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="216">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="174">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="210">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="12" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="72" FROM="71" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="4" TO="16" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="202" FROM="40" TO="188" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="201" FROM="21" TO="40" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="186" FROM="185" TO="71" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="175" FROM="174" TO="210" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="71" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="179" FROM="177" TO="181" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="200" FROM="16" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="191" FROM="49" TO="189" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="217" FROM="216" TO="174" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="190" FROM="188" TO="49" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="68" FROM="21" TO="26" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="192" FROM="189" TO="51" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="6" TO="69" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="220" FROM="219" TO="207" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="79" FROM="69" TO="78" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="81" FROM="78" TO="80" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="83" FROM="78" TO="82" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="86" FROM="84" TO="88" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="87" FROM="82" TO="84" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="89" FROM="88" TO="85" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="91" FROM="85" TO="90" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="114" FROM="113" TO="96" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="98" FROM="96" TO="71" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="90" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="100" FROM="80" TO="109" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="111" FROM="109" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="159" FROM="142" TO="158" TEXT="false" />
+          <CONNECTION FORMAT="1.00" ID="165" FROM="164" TO="166" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="218" FROM="207" TO="216" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="173" FROM="142" TO="143" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="172" FROM="140" TO="142" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="171" FROM="8" TO="140" TEXT="true" />
+          <CONNECTION FORMAT="1.00" ID="162" FROM="160" TO="164" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="167" FROM="166" TO="168" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="169" FROM="168" TO="161" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="176" FROM="143" TO="174" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="180" FROM="161" TO="177" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="182" FROM="181" TO="178" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="184" FROM="178" TO="183" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="214" FROM="213" TO="185" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="187" FROM="183" TO="185" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="206" FROM="26" TO="219" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="212" FROM="210" TO="209" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="215" FROM="209" TO="213" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="205" FROM="51" TO="219" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="221" FROM="158" TO="160" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>

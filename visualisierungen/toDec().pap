@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="10AFED4BC67F66E9">
-  <PROJECT FORMAT="1.00" NAME="toDec()" AUTHOR="Hexogen" CREATED="2021.08.31 20:09:09" MODIFIED="2021.08.31 21:19:47">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="326090F3B8FAD3A7">
+  <PROJECT FORMAT="1.00" NAME="toDec()" AUTHOR="Hexogen" CREATED="2021.08.31 20:09:09" MODIFIED="2021.09.01 09:20:18">
     <DIAGRAMS>
-      <DIAGRAM FORMAT="1.00" ID="0" NAME="toDec(source, zahl)" CREATED="2021.08.31 20:09:20" MODIFIED="2021.08.31 21:19:47">
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="toDec(source, zahl)" CREATED="2021.08.31 20:09:20" MODIFIED="2021.09.01 09:20:18">
         <LAYOUT FORMAT="1.00" COLUMNS="6" ROWS="25">
           <ENTRIES>
             <ENTRY COLUMN="0" ROW="9">
@@ -32,7 +32,7 @@
             </ENTRY>
             <ENTRY COLUMN="1" ROW="11">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="84" ASSOCIATE="85">
-                <TEXT><![CDATA[für alle Elemente in zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="1" ROW="12">
@@ -117,7 +117,7 @@
             </ENTRY>
             <ENTRY COLUMN="3" ROW="5">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="188" ASSOCIATE="189">
-                <TEXT><![CDATA[für alle Elemente in zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="3" ROW="6">
@@ -152,7 +152,7 @@
             </ENTRY>
             <ENTRY COLUMN="3" ROW="13">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="160" ASSOCIATE="161">
-                <TEXT><![CDATA[für alle Elemente in Zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="3" ROW="14">
@@ -177,7 +177,7 @@
             </ENTRY>
             <ENTRY COLUMN="3" ROW="18">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="177" ASSOCIATE="178">
-                <TEXT><![CDATA[für alle Elemente in Zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="3" ROW="19">

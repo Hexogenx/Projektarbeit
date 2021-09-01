@@ -1,4 +1,5 @@
-START toDec(source, zahl), Parameter source ist String, zahl ist String.
+Funktion toDec(source, zahl), Parameter source ist String, zahl ist String.
+START
 	wenn zahl 0 ist:
 		0 zurückgeben
 	Variable result als 0 initialisieren

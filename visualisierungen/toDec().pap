@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="6094B2C33D2C63AB">
-  <PROJECT FORMAT="1.00" NAME="toDec()" AUTHOR="Hexogen" CREATED="2021.08.31 20:09:09" MODIFIED="2021.09.01 13:33:53">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="B12E2B435A118AC9">
+  <PROJECT FORMAT="1.00" NAME="toDec()" AUTHOR="Hexogen" CREATED="2021.08.31 20:09:09" MODIFIED="2021.09.01 14:57:00">
     <DIAGRAMS>
-      <DIAGRAM FORMAT="1.00" ID="1" NAME="toDec(source: str, zahl: str) -&gt; int" CREATED="2021.09.01 13:19:20" MODIFIED="2021.09.01 13:33:53">
+      <DIAGRAM FORMAT="1.00" ID="1" NAME="toDec(source: str, zahl: str) -&gt; int" CREATED="2021.09.01 13:19:20" MODIFIED="2021.09.01 14:57:00">
         <LAYOUT FORMAT="1.00" COLUMNS="4" ROWS="24">
           <ENTRIES>
             <ENTRY COLUMN="0" ROW="3">
@@ -11,8 +11,8 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="21">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="8">
-                <TEXT><![CDATA[Ausgabe von 0]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="97">
+                <TEXT><![CDATA[return 0]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="22">
@@ -77,7 +77,7 @@
             </ENTRY>
             <ENTRY COLUMN="2" ROW="5">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="17" ASSOCIATE="18">
-                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in Liste zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="6">
@@ -91,13 +91,13 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="8">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="24">
-                <TEXT><![CDATA[Ausgabe von result]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="94">
+                <TEXT><![CDATA[return result]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="9">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="32" ASSOCIATE="33">
-                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in Liste zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="10">
@@ -111,13 +111,13 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="12">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="37">
-                <TEXT><![CDATA[Ausgabe von result]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="95">
+                <TEXT><![CDATA[return result]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="13">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="46" ASSOCIATE="47">
-                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in Liste zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="14">
@@ -142,7 +142,7 @@
             </ENTRY>
             <ENTRY COLUMN="2" ROW="18">
               <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="56" ASSOCIATE="57">
-                <TEXT><![CDATA[für alle Indizes i in zahl]]></TEXT>
+                <TEXT><![CDATA[für alle Indizes i in Liste zahl]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="19">
@@ -156,8 +156,8 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="21">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="64">
-                <TEXT><![CDATA[Ausgabe von result]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="96">
+                <TEXT><![CDATA[return result]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="22">
@@ -192,16 +192,16 @@
           <CONNECTION FORMAT="1.00" ID="16" FROM="13" TO="17" TEXT="ja" />
           <CONNECTION FORMAT="1.00" ID="19" FROM="17" TO="20" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="21" FROM="20" TO="18" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="25" FROM="18" TO="24" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="27" FROM="24" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="94" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="18" TO="94" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="29" FROM="28" TO="44" TEXT="nein" />
           <CONNECTION FORMAT="1.00" ID="31" FROM="28" TO="32" TEXT="ja" />
           <CONNECTION FORMAT="1.00" ID="34" FROM="32" TO="35" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="36" FROM="35" TO="33" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="38" FROM="33" TO="37" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="40" FROM="37" TO="39" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="95" TO="39" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="33" TO="95" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="41" FROM="26" TO="39" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="93" FROM="64" TO="91" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="63" FROM="57" TO="96" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="73" FROM="72" TO="2" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="48" FROM="46" TO="50" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="49" FROM="44" TO="46" TEXT="ja" />
@@ -211,12 +211,12 @@
           <CONNECTION FORMAT="1.00" ID="58" FROM="56" TO="60" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="59" FROM="47" TO="56" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="61" FROM="60" TO="57" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="63" FROM="57" TO="64" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="96" TO="91" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="43" FROM="39" TO="70" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="45" FROM="44" TO="80" TEXT="nein" />
           <CONNECTION FORMAT="1.00" ID="92" FROM="91" TO="72" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="89" FROM="8" TO="88" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="87" FROM="85" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="87" FROM="85" TO="97" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="89" FROM="97" TO="88" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="81" FROM="80" TO="72" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="74" FROM="70" TO="91" TEXT="" />
         </CONNECTIONS>

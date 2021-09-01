@@ -24,21 +24,21 @@ while True:
         menu.hexmenu()
         inph = input("Ihre Wahl: ")
         while True:
-                if inph == "1":
+                if inph == "d":
                 # Hexadezimal nach Dezimal
                     # Direkte Berechnung und Ausgabe
                     result = calc.toDec("h", zahl)
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                elif inph == "2":
+                elif inph == "o":
                 # Hexadezimal nach Oktal
                     # Von Hexadezimal nach Dezimal, von Dezimal nach Oktal und Ausgabe
                     result = calc.decTo("o", calc.toDec("h", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-                elif inph == "3":
+                elif inph == "b":
                 # Hexadezimal nach Binär
                     # Von Hexadezimal nach Dezimal, von Dezimal nach Binär und Ausgabe
                     result = calc.decTo("b", calc.toDec("h", zahl))
@@ -62,21 +62,21 @@ while True:
         menu.decmenu()
         inpd = input("Ihre Wahl: ")
         while True:
-            if inpd == "1":
+            if inpd == "h":
                 # Dezimal nach Hexadezimal
                     # Direkte Berechnung und Ausgabe
                     result = calc.decTo("h", int(zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-            elif inpd == "2":
+            elif inpd == "o":
                 # Dezimal nach Oktal
                     # Direkte Berechnung und Ausgabe
                     result = calc.decTo("o", int(zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-            elif inpd == "3":
+            elif inpd == "b":
                 # Dezimal nach Binär
                     # Direkte Berechnung und Ausgabe
                     result = calc.decTo("b", int(zahl))
@@ -100,21 +100,21 @@ while True:
         menu.octmenu()
         inpo = input("Ihre Wahl: ")
         while True:
-            if inpo == "1":
+            if inpo == "h":
                 # Oktal nach Hexadezimal
                     # Von Oktal nach Dezimal, von Dezimal nach Hexadezimal und Ausgabe
                     result = calc.decTo("h", calc.toDec("o", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-            elif inpo == "2":
+            elif inpo == "d":
                 # Oktal nach Dezimal
                     # Direkte Berechnung und Ausgabe
                     result = calc.toDec("o", zahl)
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-            elif inpo == "3":
+            elif inpo == "b":
                 # Oktal nach Binär
                     # Von Oktal nach Dezimal, von Dezimal nach Binär und Ausgabe
                     result = calc.decTo("b", calc.toDec("o", zahl))
@@ -138,21 +138,21 @@ while True:
         menu.binmenu()
         inpb = input("Ihre Wahl: ")
         while True:
-            if inpb == "1":
+            if inpb == "h":
                 # Binär nach Hexadezimal
                     # Von Binär nach Dezimal, von Dezimal nach Hexadezimal und Ausgabe
                     result = calc.decTo("h", calc.toDec("b", zahl))
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-            elif inpb == "2":
+            elif inpb == "d":
                 # Binär nach Dezimal
                     # Direkte Berechnung und Ausgabe
                     result = calc.toDec("b", zahl)
                     print(f"Ergebnis: {result}")
                     input("Weiter mit der Eingabe-Taste")
                     break
-            elif inpb == "3":
+            elif inpb == "o":
                 # Binär nach Oktal
                     # Von Binär nach Dezimal, von Dezimal nach Oktal und Ausgabe
                     result = calc.decTo("o", calc.toDec("b", zahl))

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="12854382FC76EE43">
-  <PROJECT FORMAT="1.00" NAME="testDec()" AUTHOR="Hexogen" CREATED="2021.08.31 19:43:41" MODIFIED="2021.09.01 12:53:41">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="F695A6D3D0AA2D17">
+  <PROJECT FORMAT="1.00" NAME="testDec()" AUTHOR="Hexogen" CREATED="2021.08.31 19:43:41" MODIFIED="2021.09.01 14:58:15">
     <DIAGRAMS>
-      <DIAGRAM FORMAT="1.00" ID="0" NAME="testDec(sample)" CREATED="2021.08.31 19:43:44" MODIFIED="2021.09.01 12:53:41">
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="testDec(sample)" CREATED="2021.08.31 19:43:44" MODIFIED="2021.09.01 14:58:15">
         <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="9">
           <ENTRIES>
             <ENTRY COLUMN="0" ROW="5">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="30">
-                <TEXT><![CDATA[Ausgabe von False]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="38">
+                <TEXT><![CDATA[return False]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="7">
@@ -46,8 +46,8 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="1" ROW="6">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="12">
-                <TEXT><![CDATA[Ausgabe von True]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="37">
+                <TEXT><![CDATA[return True]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="1" ROW="7">
@@ -61,8 +61,8 @@
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="3">
-              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="16">
-                <TEXT><![CDATA[Ausgabe von False]]></TEXT>
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[return False]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="2" ROW="7">
@@ -78,14 +78,14 @@
           <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="10" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="8" TEXT="ja" />
           <CONNECTION FORMAT="1.00" ID="24" FROM="23" TO="2" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="15" FROM="10" TO="16" TEXT="nein" />
-          <CONNECTION FORMAT="1.00" ID="18" FROM="16" TO="21" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="23" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="18" FROM="36" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="10" TO="36" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="26" TO="37" TEXT="nein" />
           <CONNECTION FORMAT="1.00" ID="25" FROM="21" TO="23" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="27" FROM="26" TO="12" TEXT="nein" />
-          <CONNECTION FORMAT="1.00" ID="29" FROM="26" TO="30" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="37" TO="23" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="38" TO="33" TEXT="" />
           <CONNECTION FORMAT="1.00" ID="35" FROM="33" TO="23" TEXT="" />
-          <CONNECTION FORMAT="1.00" ID="32" FROM="30" TO="33" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="26" TO="38" TEXT="ja" />
         </CONNECTIONS>
       </DIAGRAM>
     </DIAGRAMS>

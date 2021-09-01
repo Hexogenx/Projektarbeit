@@ -1,28 +1,19 @@
 START toDec(source, zahl), Parameter source ist String, zahl ist String.
-    wenn das Quellsystem binär ist:
-        ergebnis startet bei 0
-        wenn die zahl 0 ist, return 0 #(Fehlervermeidung)
-        vertauschen der ziffern der zahl von vorne nach hinten und mache eine liste draus
-        für alle ziffern in der liste:
-            ergebnis = ergebnis + integer der ziffer mal basis 2 hoch stellenwert
-        ausgeben des ergebnisses
-    wenn das Quellsystem oktal ist:
-        ergebnis startet bei 0
-        wenn die zahl 0 ist, return 0 #(Fehlervermeidung)
-        vertauschen der ziffern der zahl von vorne nach hinten und und mache eine liste draus
-        für alle ziffern in der liste:
-            ergebnis = ergebnis + integer der ziffer mal basis 8 hoch stellenwert
-        ausgeben des ergebnisses
-    wenn das Quellsystem hexadezimal ist:
-        ergebnis startet bei 0
-        wenn die zahl 0 ist, return 0 #(Fehlervermeidung)
-        vertauschen der ziffern der zahl von vorne nach hinten und und mache eine liste draus
-        für jede ziffer in der liste:
-            wenn die ziffer keine zahl ist, sondern buchstabe:
-                ziffer großschreiben
-                ziffer mit der zahl aus der konvertierungskonstante tauschen
-        für alle ziffern in der zahl:
-            ergebnis = ergebnis + integer der ziffer mal basis 16 hoch stellenwert
-        ausgeben des ergebnisses
-    ansonsten Fehler ausgeben #(zu debug zwecken)
+	wenn zahl 0 ist:
+		0 zurückgeben
+	Variable result als 0 initialisieren
+	zahl in eine Liste konvertieren und invertieren
+	wenn Quellsystem binär ist:
+		für alle Indizes i in zahl:
+			result ist result + int(zahl[i])*Basis des Zahlensystems 2**Laufvariable i
+	wenn Quellsystem oktal ist:
+		für alle Indizes i in zahl:
+			result ist result + int(zahl[i])*Basis des Zahlensystems 8**Laufvariable i
+	wenn Quellsystem hexadezimal ist:
+		für alle Indizes i in zahl:
+			wenn zahl[i] ein Buchstabe ist:
+				zahl[i] großschreiben
+				zahl[i] in die entsprechende dezimale Darstellung umwandeln
+		für alle Indizes i in zahl:
+			result ist result + int(zahl[i])*Basis des Zahlensystems 16**Laufvariable i
 ENDE

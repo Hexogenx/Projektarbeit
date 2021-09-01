@@ -1,6 +1,6 @@
 START testDec(sample), Parameter sample ist ein string.
-    für jede Ziffer des strings sample:
-        wenn Ziffer nicht in der Konstante für zulässige Ziffern enthalten ist:
+    für jeden Index i des Strings sample:
+        wenn Ziffer sample[i] nicht in der Konstante für zulässige Ziffern enthalten ist:
             return False #(Ziffer ist nicht in der Konstante)
     wenn ein leerer String übergeben wird: #(Fehlervermeidung)
         return False

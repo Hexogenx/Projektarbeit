@@ -1,73 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root xmlns:nsd="https://structorizer.fisch.lu" version="3.31-04" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="Hexogen" created="2021-08-31" changedby="Hexogen" changed="2021-08-31" origin="Structorizer 3.31-04" text="&#34;toDec(source: String; zahl: String)&#34;" comment="&#34;&#34;" color="ffffff" type="sub" style="nice">
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.31-04" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="Hexogen" created="2021-08-31" changedby="DanielGrudzinski" changed="2021-09-01" origin="Structorizer 3.31-04" text="&#34;toDec(source: String; zahl: String)&#34;" comment="&#34;&#34;" color="ffffff" type="sub" style="nice">
 	<children>
+		<alternative text="&#34;zahl == &#34;&#34;0&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<jump text="&#34;return 0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;ergebnis := 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;zahl := list(zahl)[::-1]&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
 		<alternative text="&#34;source == &#34;&#34;b&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
 			<qTrue>
-				<instruction text="&#34;result := 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
-				<alternative text="&#34;zahl == &#34;&#34;0&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
-					<qTrue>
-						<jump text="&#34;return 0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
-					</qTrue>
-					<qFalse color="ffffff">
-					</qFalse>
-				</alternative>
-				<instruction text="&#34;zahl := list(zahl)[::-1]&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
 				<for text="&#34;for i &#60;- 0 to len(zahl)&#34;" comment="&#34;&#34;" counterVar="i" startValue="0" endValue="len(zahl)" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
 					<qFor>
-						<instruction text="&#34;result := result + (int(zahl[i])*2**i)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;ergebnis := ergebnis + (int(zahl[i])*2**i)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
 					</qFor>
 				</for>
-				<jump text="&#34;return result&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
+				<jump text="&#34;return ergebnis&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
 			</qTrue>
 			<qFalse>
 				<alternative text="&#34;source == &#34;&#34;o&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
 					<qTrue>
-						<instruction text="&#34;result := 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
-						<alternative text="&#34;zahl == &#34;&#34;0&#34;&#34;&#34;" comment="" color="ffffff" disabled="0">
-							<qTrue>
-								<jump text="&#34;return 0&#34;" comment="" color="ffffff" disabled="0"></jump>
-							</qTrue>
-							<qFalse color="ffffff">
-							</qFalse>
-						</alternative>
-						<instruction text="&#34;zahl := list(zahl)[::-1]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
 						<for text="&#34;for i &#60;- 0 to len(zahl)&#34;" comment="" counterVar="i" startValue="0" endValue="len(zahl)" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
 							<qFor>
-								<instruction text="&#34;result := result + (int(zahl[i])*8**i)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+								<instruction text="&#34;ergebnis := ergebnis + (int(zahl[i])*8**i)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
 							</qFor>
 						</for>
-						<jump text="&#34;return result&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
+						<jump text="&#34;return ergebnis&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
 					</qTrue>
 					<qFalse>
 						<alternative text="&#34;source == &#34;&#34;h&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
 							<qTrue>
-								<instruction text="&#34;result := 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
-								<alternative text="&#34;zahl == &#34;&#34;0&#34;&#34;&#34;" comment="" color="ffffff" disabled="0">
+								<for text="&#34;for i &#60;- 0 to len(zahl)&#34;" comment="" counterVar="i" startValue="0" endValue="len(zahl)" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+									<qFor color="ffffff">
+									</qFor>
+								</for>
+								<alternative text="&#34;not zahl[i].isdigit()&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
 									<qTrue>
-										<jump text="&#34;return 0&#34;" comment="" color="ffffff" disabled="0"></jump>
+										<instruction text="&#34;zahl[i] := zahl[i].capitalize()&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;zahl[i] := HEXADECIMAL_CONVERT_FROM[zahl[i]]&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
 									</qTrue>
 									<qFalse color="ffffff">
 									</qFalse>
 								</alternative>
-								<instruction text="&#34;zahl := list(zahl)[::-1]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
-								<for text="&#34;for i &#60;- 0 to len(zahl)&#34;" comment="&#34;&#34;" counterVar="i" startValue="0" endValue="len(zahl)" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
-									<qFor>
-										<alternative text="&#34;not zahl[i].isdigit()&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
-											<qTrue>
-												<instruction text="&#34;zahl[i] := zahl[i].capitalize()&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
-												<instruction text="&#34;zahl[i] := HEXADECIMAL_CONVERT_FROM[zahl[i]]&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
-											</qTrue>
-											<qFalse color="ffffff">
-											</qFalse>
-										</alternative>
-									</qFor>
-								</for>
 								<for text="&#34;for i &#60;- 0 to len(zahl)&#34;" comment="" counterVar="i" startValue="0" endValue="len(zahl)" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
 									<qFor>
-										<instruction text="&#34;result := result + (int(zahl[i])*16**i)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;ergebnis := ergebnis + (int(zahl[i])*16**i)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
 									</qFor>
 								</for>
-								<jump text="&#34;return result&#34;" comment="&#34;&#34;" color="ffffff" disabled="0"></jump>
+								<jump text="&#34;return ergebnis&#34;" comment="" color="ffffff" disabled="0"></jump>
 							</qTrue>
 							<qFalse>
 								<instruction text="&#34;print(&#34;&#34;Fehler&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>

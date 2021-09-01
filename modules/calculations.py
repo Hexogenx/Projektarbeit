@@ -24,11 +24,13 @@ def decTo(target: str, zahl: int) -> str:
     zahl - Der Integer, der umgerechnet werden soll.
 
     return - Die umgerechnete Zahl im Zielsystem als String."""
+    # Bei Eingabe 0 einfach 0 zurückgeben.
+    if zahl == 0:
+        return 0
+    # Variable initialisieren
+    result = []
     if target == "b":
         # Durch 2 teilen bis 0. Reste aufschreiben und invertieren.
-        if zahl == 0:
-            return 0
-        result = []
         while zahl > 0:
             result.append(zahl%2)
             zahl = zahl // 2
@@ -37,9 +39,6 @@ def decTo(target: str, zahl: int) -> str:
         return "".join(result)
     elif target == "o":
         # Durch 8 teilen bis 0. Reste aufschreiben und invertieren.
-        result = []
-        if zahl == 0:
-            return 0
         while zahl > 0:
             result.append(zahl%8)
             zahl = zahl // 8
@@ -49,9 +48,6 @@ def decTo(target: str, zahl: int) -> str:
     elif target == "h":
         # Durch 16 Teilen bis 0. Reste aufschreiben und invertieren.
         # Zahlen über 9 durch entsprechende Buchstaben tauschen.
-        result = []
-        if zahl == 0:
-            return 0
         while zahl > 0:
             result.append(zahl%16)
             zahl = zahl // 16
@@ -79,34 +75,26 @@ def toDec(source: str, zahl: str) -> int:
     zahl - Der Integer, der umgerechnet werden soll.
 
     return - Die umgerechnete Zahl im Dezimalsystem als Integer."""
+    # Bei Eingabe 0 einfach 0 zurückgeben.
+    if zahl == "0":
+        return 0
+    # Variable initialisieren
+    result = 0
+    # Zahl in eine Liste umwandeln und invertieren
+    zahl = list(zahl)[::-1]
     if source == "b":
-        # Ziffern der Zahl invertieren.
         # Aufaddieren der Zahl multipliziert mit der Basis (hier 2) des Zahlensystems hoch Stellenwert.
-        result = 0
-        if zahl == "0":
-            return 0
-        zahl = list(zahl)[::-1]
         for i in range(0,len(zahl)):
             result = result + (int(zahl[i])*2**i)
         return result
     elif source == "o":
-        # Ziffern der Zahl invertieren.
         # Aufaddieren der Zahl multipliziert mit der Basis (hier 2) des Zahlensystems hoch Stellenwert.
-        result = 0
-        if zahl == "0":
-            return 0
-        zahl = list(zahl)[::-1]
         for i in range(0,len(zahl)):
             result = result + (int(zahl[i])*8**i)
         return result
     elif source == "h":
-        # Ziffern der Zahl invertieren.
         # Hexadezimale Ziffern in Dezimalzahlen konvertieren. Eventuell capitalizen.
         # Aufaddieren der Zahl multipliziert mit der Basis (hier 2) des Zahlensystems hoch Stellenwert.
-        result = 0
-        if zahl == "0":
-            return 0
-        zahl = list(zahl)[::-1]
         for i in range(0,len(zahl)):
             if not zahl[i].isdigit():
                 zahl[i] = zahl[i].capitalize()
